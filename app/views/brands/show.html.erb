@@ -1,0 +1,14 @@
+<h1>Brand for <%= link_to @client.name, @client %></h1>
+<p>
+  <b>Name:</b>
+  <%=h @brand.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @brand.description %>
+</p>
+
+<%= render :partial => "partials/verify", :locals => { :obj => [@client, @brand] } %>
+
+<%= link_to 'Edit', edit_client_brand_path(@client, @brand) %> | <%= link_to 'Show Products', client_brand_products_path(@client, @brand) %> | <%= link_to 'Back', client_brands_path(@client) %>

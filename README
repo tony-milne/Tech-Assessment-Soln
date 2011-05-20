@@ -1,0 +1,20 @@
+Technical assessment solution by Tony Milne
+
+Background:
+
+You have a simple rails application that your company uses to manage information about the clients that they work for.  It allows them store contact details for the client, as well as to track information about the brands and products that the client has.  This application has been working for some time but now there is some concern that the data in the system might not be correct.
+
+The Task:
+
+The key-user of the application has requested that users of the system can flag the clients, brands or products as "verified" or "unverified".  The default state of something should be "unverified" and once a user has looked at the data and checked it they would flag the data as "verified".  If some time later the data changes (for example someone alters the description of a product, or the address of a client) the object should go back to the "unverified" state and await some user coming along to check the data again.
+
+What we want from you:
+
+We know that there are rails plugins out there that would probably make this a simple fix.  We're interested in your ability to code, so we'd rather you didn't use someone else's plugin to do the verification part.  However, please feel free to use any other plugins in your solution if you want, or write your own!  We want to see how you approach the problem, how you would solve it and most importantly what your code looks like.  Do whatever you think shows your abilities best.
+
+Some things to think about:
+
+ - how would you change your solution if there were 4 models, 10 models, 100 models?
+ - how would you change your solution so that "unverified" objects aren't present in the default index for the controller (but you can still list them somehow)?
+ - we said don't use a pre-existing plugin, but what plugin (if any) would you use if you were allowed?
+ - this is quite the legacy application. How would you bring this up-to-date?

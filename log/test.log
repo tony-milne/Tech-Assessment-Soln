@@ -1,0 +1,127 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "brands" [0m
+
+
+Processing BrandsController#create (for 0.0.0.0 at 2011-04-21 23:40:46) [POST]
+  Parameters: {"brand"=>{}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "brands" [0m
+  [4;36;1mBrand Load (0.1ms)[0m   [0;1mSELECT * FROM "brands" WHERE ("brands"."id" = 953125641) [0m
+
+
+Processing BrandsController#destroy (for 0.0.0.0 at 2011-04-21 23:40:46) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mBrand Load (0.2ms)[0m   [0mSELECT * FROM "brands" WHERE ("brands"."id" = 953125641) [0m
+
+
+Processing BrandsController#edit (for 0.0.0.0 at 2011-04-21 23:40:46) [GET]
+  Parameters: {"id"=>"953125641"}
+
+
+Processing BrandsController#index (for 0.0.0.0 at 2011-04-21 23:40:46) [GET]
+
+
+Processing BrandsController#new (for 0.0.0.0 at 2011-04-21 23:40:46) [GET]
+  [4;36;1mBrand Load (0.2ms)[0m   [0;1mSELECT * FROM "brands" WHERE ("brands"."id" = 953125641) [0m
+
+
+Processing BrandsController#show (for 0.0.0.0 at 2011-04-21 23:40:46) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mBrand Load (0.2ms)[0m   [0mSELECT * FROM "brands" WHERE ("brands"."id" = 953125641) [0m
+
+
+Processing BrandsController#update (for 0.0.0.0 at 2011-04-21 23:40:46) [PUT]
+  Parameters: {"brand"=>{}, "id"=>"953125641"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clients" [0m
+
+
+Processing ClientsController#create (for 0.0.0.0 at 2011-04-21 23:40:46) [POST]
+  Parameters: {"client"=>{}}
+  [4;35;1mClient Exists (0.2ms)[0m   [0mSELECT "clients".id FROM "clients" WHERE ("clients"."name" IS NULL) LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/new
+Completed in 31ms (View: 5, DB: 2) | 200 OK [http://test.host/clients?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clients" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "clients" [0m
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 953125641) [0m
+
+
+Processing ClientsController#destroy (for 0.0.0.0 at 2011-04-21 23:40:46) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 953125641) [0m
+  [4;36;1mBrand Load (0.1ms)[0m   [0;1mSELECT * FROM "brands" WHERE ("brands".client_id = 953125641) [0m
+  [4;35;1mClient Destroy (0.2ms)[0m   [0mDELETE FROM "clients" WHERE "id" = 953125641[0m
+Redirected to http://test.host/clients
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/clients/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clients" [0m
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 953125641) [0m
+
+
+Processing ClientsController#edit (for 0.0.0.0 at 2011-04-21 23:40:46) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 953125641) [0m
+Rendering template within layouts/clients
+Rendering clients/edit
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/clients/953125641/edit]
+
+
+Processing ClientsController#index (for 0.0.0.0 at 2011-04-21 23:40:46) [GET]
+  [4;35;1mClient Load (0.3ms)[0m   [0mSELECT * FROM "clients" [0m
+Rendering template within layouts/clients
+Rendering clients/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://test.host/clients]
+
+
+Processing ClientsController#new (for 0.0.0.0 at 2011-04-21 23:40:46) [GET]
+Rendering template within layouts/clients
+Rendering clients/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/clients/new]
+  [4;36;1mClient Load (0.3ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 953125641) [0m
+
+
+Processing ClientsController#show (for 0.0.0.0 at 2011-04-21 23:40:46) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 953125641) [0m
+Rendering template within layouts/clients
+Rendering clients/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/clients/953125641]
+  [4;36;1mClient Load (0.2ms)[0m   [0;1mSELECT * FROM "clients" WHERE ("clients"."id" = 953125641) [0m
+
+
+Processing ClientsController#update (for 0.0.0.0 at 2011-04-21 23:40:46) [PUT]
+  Parameters: {"id"=>"953125641", "client"=>{}}
+  [4;35;1mClient Load (0.2ms)[0m   [0mSELECT * FROM "clients" WHERE ("clients"."id" = 953125641) [0m
+  [4;36;1mClient Exists (0.1ms)[0m   [0;1mSELECT "clients".id FROM "clients" WHERE ("clients"."name" = 'MyString' AND "clients".id <> 953125641) LIMIT 1[0m
+Rendering template within layouts/clients
+Rendering clients/edit
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://test.host/clients/953125641?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2011-04-21 23:40:46) [POST]
+  Parameters: {"product"=>{}}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#destroy (for 0.0.0.0 at 2011-04-21 23:40:46) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#edit (for 0.0.0.0 at 2011-04-21 23:40:46) [GET]
+  Parameters: {"id"=>"953125641"}
+
+
+Processing ProductsController#index (for 0.0.0.0 at 2011-04-21 23:40:46) [GET]
+
+
+Processing ProductsController#new (for 0.0.0.0 at 2011-04-21 23:40:46) [GET]
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#show (for 0.0.0.0 at 2011-04-21 23:40:46) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.2ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#update (for 0.0.0.0 at 2011-04-21 23:40:46) [PUT]
+  Parameters: {"id"=>"953125641", "product"=>{}}

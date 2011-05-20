@@ -1,0 +1,9 @@
+<% form_for(obj) do |f| %>
+  <p>
+    <%= f.label "verify?" %>
+    <%= f.check_box "verified" %>
+  </p>
+  <p>
+    <%= f.submit "Verify" %>
+  </p>
+<% end %>

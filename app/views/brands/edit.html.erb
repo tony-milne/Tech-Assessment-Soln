@@ -1,0 +1,19 @@
+<h1>Editing brand for <%= link_to @client.name, @client %></h1>
+
+<% form_for([@client, @brand]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', [@client, @brand] %> | <%= link_to 'Back', client_brands_path(@client) %>
